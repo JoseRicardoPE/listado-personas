@@ -1,0 +1,19 @@
+<div class="box">
+    <form action="" class="item" #f="ngForm" (ngSubmit)="f.form.valid && onGuardarPersona()">
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre" [(ngModel)]="nombreInput" required> 
+        
+        <input type="text" name="apellido" id="apellido" placeholder="Apellido" [(ngModel)]="apellidoInput" required> 
+            
+        <button type="submit" style="cursor:pointer">
+            +
+            <!-- <i class="fa fa-instagram fa-5x"></i> -->
+            <!-- <i class="fa fa-twitter fa-5x"></i> -->
+            <!-- <i class="fa fa-user fa-5x icono"></i> -->
+        </button>
+
+        <button type="submit" *ngIf="index != null" class="buttonRed" (click)="eliminarPersona()">-</button>
+        
+    </form>
+
+</div> 
+
